@@ -1,0 +1,186 @@
+@font-face {
+    font-family: "inicio";
+    src: url(../fontes/KGPerfectPenmanship.otf) format(opentype);
+}
+:root {
+  --tinta: #4a1024;           /* vinho escuro: topo, títulos, rodapé */
+  --fundo: #fbf6f7;           /* fundo levemente rosado */
+  --destaque: #8b1e3f;        /* vinho principal: botões e bordas dos cards */
+  --destaque-escuro: #6d1530; /* hover dos botões e links */
+  --apoio: #d4a24c;           /* dourado: detalhes */
+  --texto: #2b2326;
+  --branco: #ffffff;
+}
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: "inicio", Arial, sans-serif;
+    color: var(--texto);
+    background-color: var(--fundo);
+    line-height: 1.6;
+}
+
+a { color: var(--destaque-escuro); }
+a:hover { color: var(--tinta); }
+
+img { max-width: 100%; height: auto; }
+
+h1, h2, h3 { color: var(--tinta); line-height: 1.25; }
+
+
+.logo {
+    color: var(--branco);
+    font-size: 1.5em;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Caixa central: limita a largura e centraliza o conteúdo */
+.container{
+    width: 1000px;
+    max-width: 92%;
+    margin: 0 auto;
+}
+
+section { padding: 40px 0;}
+
+/* 3. TOPO E MENU */
+.topo{
+    background-image: linear-gradient(to right, #5e0101, #860000, #c60101);
+    color: var(--branco);
+}
+.barra{
+    display: flex;
+    justify-content: space-between;    /* logo à esquerda, menu à direita */
+    align-items: center;
+    padding: 16px 0;
+}
+.menu{
+    display: flex;
+    gap: 8px;
+}
+.menu a{
+    color: var(--branco);
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: brackground-color 0.3s;
+}
+.menu a:hover,
+.menu a:focus,
+.menu a.ativo {
+  background-color: rgba(255, 255, 255, 0.18);
+  color: var(--branco);
+}
+
+/*RODAPÉ*/
+.rodape {
+    background-color: var(--tinta);
+    color: var(--branco);
+    text-align: center;
+    padding: 24px 0;
+    margin-top: 40px;
+}
+
+/* 4. HOME */
+.hero{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 50px 0;
+}
+.hero img{
+    width: 280px;
+    border-radius: 50%;
+    border: 6px solid var(--apoio);
+}
+.hero h1{ font-size: 2.4em; margin: 0 0 10px; }
+
+.hero p::first-letter{   /* primeira letra maior */
+    font-size: 1.6em;
+    font-weight: 700;
+    color: var(--destaque-escuro);
+}
+.botao {
+  display: inline-block;
+  background-color: var(--destaque);
+  color: var(--branco);
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.botao:hover{
+    background-color: var(--destaque-escuro);
+    color: var(--branco);
+    transform: translateY(-2px);
+}
+
+/* Menu de âncoras (links dentro da mesma página) */
+.ancoras{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 14px 0;
+    border-top: 1px solid #d5dbe2;
+    border-bottom: 1px solid #d5dbe2;
+}
+.ancoras a{
+    padding: 6px 14px;
+    border-radius: 20px;
+    background-color: var(--branco);
+    text-decoration: none;
+    border: 1px solid #d5dbe2;
+}
+.ancoras a:hover { background-color: var(--apoio); border-color: var(--apoio); }
+
+/* Cards lado a lado */
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.card{
+    flex: 1 1 280px;       /* cresce, encolhe, base de 280px */
+    background-color: var(--branco);
+    padding: 22px;
+    border-radius: 12px;
+    border-top: 4px solid var(--destaque);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 { margin-top: 0; }
+
+.midia { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; }
+video { max-width: 100%; border-radius: 10px; }
+
+.github { 
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+.github img { width: 200px; border-radius: 12px; }
+
+/*Tabelas*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: var(--branco);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12)
+}
+
+caption { font-weight: 700; padding: 10px; text-align: left; color: var(--tinta); }
