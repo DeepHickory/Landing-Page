@@ -184,3 +184,43 @@ table {
 }
 
 caption { font-weight: 700; padding: 10px; text-align: left; color: var(--tinta); }
+
+th, td {
+    border: 1px solid #d5dbe2;
+    padding: 12px 14px;
+    text-align: left;
+}
+
+thead { background-color: var(--tinta); color: var(--branco); }
+tbody tr:nth-child(even) { background-color: #eef2f5; }
+tbody tr:hover { background-color: #fff3d6; }
+tfoot { background-color: #e3e9ee; font-style: italic; }
+
+.tabela-rolagem { overflow-x: auto; }   /* tabela rola de lado no celular */
+
+/*FORMULÁRIO */
+form {
+    background-color: var(--branco);
+    padding: 26px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+fieldset { border: 1px solid #d5dbe2; border-radius: 8px; margin-bottom: 18px; }
+legend { padding: 0 8px; font-weight: 600; color: var(--tinta); }
+
+label { display: block; margin: 12px 0 4px; font-weight: 600; }
+label.inline { display: inline; font-weight: 400; margin-right: 14px; }
+
+input[type="text"]
+input[type="tel"]
+input[type="email"]
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b9c2cc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1em;
+}   
